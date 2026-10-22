@@ -1,8 +1,16 @@
+cmake_minimum_required(VERSION 3.24)
+
+project(2.2-cpp-cuda-interactive LANGUAGES CXX CUDA)
+
+find_package(CUDAToolkit REQUIRED)
+
 add_executable(2.2-cpp-cuda-interactive
-    src/main.cpp
-    src/print_index.cu
+    main.cpp
+    print_index.cu
 )
-target_include_directories(2.2-cpp-cuda-interactive PRIVATE include)
+
+target_compile_features(2.2-cpp-cuda-interactive PRIVATE cxx_std_17 cuda_std_17)
+target_include_directories(2.2-cpp-cuda-interactive PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(2.2-cpp-cuda-interactive PRIVATE CUDA::cudart)
 
 if(MSVC)

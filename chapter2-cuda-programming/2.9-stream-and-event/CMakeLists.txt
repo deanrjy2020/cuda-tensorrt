@@ -1,11 +1,19 @@
+cmake_minimum_required(VERSION 3.24)
+
+project(2.9-stream-and-event LANGUAGES CXX CUDA)
+
+find_package(CUDAToolkit REQUIRED)
+
 add_executable(2.9-stream-and-event
-    src/gelu.cu
-    src/main.cpp
-    src/stream.cu
-    src/timer.cpp
-    src/utils.cpp
+    gelu.cu
+    main.cpp
+    stream.cu
+    timer.cpp
+    utils.cpp
 )
-target_include_directories(2.9-stream-and-event PRIVATE include)
+
+target_compile_features(2.9-stream-and-event PRIVATE cxx_std_17 cuda_std_17)
+target_include_directories(2.9-stream-and-event PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(2.9-stream-and-event PRIVATE CUDA::cudart)
 
 if(MSVC)

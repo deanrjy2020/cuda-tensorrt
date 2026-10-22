@@ -1,13 +1,3 @@
 {
-  "cmake.sourceDirectory": "${workspaceFolder}",
-  "cmake.useCMakePresets": "always",
-  "cmake.configureOnOpen": false,
-  "cmake.buildBeforeRun": true,
-  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-  "files.associations": { "*.cu": "cpp", "*.cuh": "cpp" },
-  "cmake.debugConfig": {
-    "type": "cppvsdbg",
-    "cwd": "${workspaceFolder}",
-    "console": "integratedTerminal"
-  }
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json"
 }

@@ -1,6 +1,17 @@
 CUDA / TensorRT
+CUDA与TensorRT部署实战课程(2023)
+https://github.com/kalfazed/tensorrt_starter
 
-todo, gitshowcheck 修正
+todo:
+最后:
+gitshowcheck 修正
+中文标点修正
+
+next:
+跟着comment看2.1-dim-and-index\src\print_index.cu
+
+
+
 
 CUDA / TensorRT 学习工程
 
@@ -41,8 +52,7 @@ Ninja 不提供 C++ 编译器。先打开已安装 Build Tools 对应的 x64 Nat
 
 Debug:
 
-cmake --preset windows-debug
-cmake --build --preset windows-debug --target 2.1-dim-and-index
+cmake --preset windows-debug && cmake --build --preset windows-debug --target 2.1-dim-and-index
 ./build/windows-debug/bin/2.1-dim-and-index.exe
 
 Release：
